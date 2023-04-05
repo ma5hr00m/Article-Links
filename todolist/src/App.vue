@@ -1,6 +1,7 @@
 <template>
-  <h1>TodoList</h1>
-  <TodoList />
+  <main>
+    <TodoList />
+  </main>
 </template>
 
 <script>
@@ -16,18 +17,20 @@ export default {
 
 <style>
 #app{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 600px;
-  width: 800px;
-}
+  height: 620px;
+  width: 400px;
 
-h1:before{
-  content: "<";
-}
-h1:after{
-  content: ">";
+  background-color: #ffffff;
+  border: #ffffff 20px solid;
+  border-radius: 20px;
 }
 </style>
