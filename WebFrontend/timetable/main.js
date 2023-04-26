@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require("electron")
+const { app, BrowserWindow, ipcMain } = require("electron")
 const path = require('path')
+const { sklCourses } = require("hdu-lis");
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -9,8 +10,12 @@ const createWindow = () => {
             preload: path.join(__dirname, 'preload.js'),
         }
     })
-
+    ipcMain.handle('ping', () => 'pong')
     win.loadFile("index.html")
+    
+    sklCourses("22270318", "skz@yhdm4.com").then((res) => {
+        console.log(res);
+    })
 }
 
 app.whenReady().then(() => {

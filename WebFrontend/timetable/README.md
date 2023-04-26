@@ -18,7 +18,7 @@
 
 #### 图形硬件
 
-当我运行'npm start'时，会出现以下报错，但是未影响程序运行。
+当我运行`npm start`时，会出现以下报错，但是未影响程序运行。
 
 ```bash
 libva error: vaGetDriverNameByIndex() failed with unknown libva error, driver_name = (null)
