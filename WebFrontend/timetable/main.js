@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain } = require("electron")
 const path = require('path')
 const { sklCourses } = require("hdu-lis");
 
+
 const createWindow = () => {
     const win = new BrowserWindow({
         width: 800,
